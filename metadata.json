@@ -1,0 +1,6 @@
+{
+  "name": "Planner Mães de Joelhos",
+  "description": "Página de vendas de alta conversão para o Planner Mães de Joelhos e Filhos de Pé.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

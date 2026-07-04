@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", serif;
+  --font-accent: "Space Grotesk", sans-serif;
+  
+  --color-rose-brand-50: #fff9f9;
+  --color-rose-brand-100: #fbf0f0;
+  --color-rose-brand-200: #f7e1e1;
+  --color-rose-brand-300: #e6b8b8;
+  --color-rose-brand-400: #d4a5a5;
+  --color-rose-brand-500: #c08c8c;
+  --color-rose-brand-600: #aa7171;
+  --color-rose-brand-700: #8c5555;
+  --color-rose-brand-800: #6b3a3a;
+  --color-rose-brand-900: #4b2424;
+  
+  --color-gold-brand-50: #fcfaf6;
+  --color-gold-brand-100: #f5f2ed;
+  --color-gold-brand-200: #e6dbc6;
+  --color-gold-brand-300: #d8c7a5;
+  --color-gold-brand-400: #ccb483;
+  --color-gold-brand-500: #c5a059;
+  --color-gold-brand-600: #b38e46;
+  --color-gold-brand-700: #a27d37;
+  --color-gold-brand-800: #886729;
+  --color-gold-brand-900: #5f471a;
+
+  --color-stone-50: #f5f2ed;
+  --color-stone-100: #eadecf;
+  --color-stone-200: #d6cdbf;
+  --color-stone-300: #bcaf9f;
+  --color-stone-400: #9e8e81;
+  --color-stone-500: #807064;
+  --color-stone-600: #6b5e54;
+  --color-stone-700: #5a4e45;
+  --color-stone-800: #4b4139;
+  --color-stone-900: #3d352f;
+
+  --color-linen-50: #fafaf9;
+  --color-linen-100: #f5f5f4;
+  --color-linen-200: #e7e5e4;
+  --color-linen-300: #d6d3d1;
+  --color-linen-400: #a8a29e;
+  --color-linen-500: #78716c;
+}
+
+/* Custom Utilities */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #d8c7a5 0%, #c5a059 50%, #a27d37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #f5f2ed 0%, #e6dbc6 100%);
+}
+
+.bg-gold-button {
+  background: linear-gradient(135deg, #c5a059 0%, #a27d37 100%);
+  box-shadow: 0 4px 20px rgba(197, 160, 89, 0.25);
+}
+
+.bg-gold-button:hover {
+  background: linear-gradient(135deg, #d8c7a5 0%, #b38e46 100%);
+  box-shadow: 0 6px 24px rgba(197, 160, 89, 0.4);
+}
+
+.capa-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.capa-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 30%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg);
+  animation: shine 6s infinite;
+}
+
+@keyframes shine {
+  0% { left: -60%; }
+  15% { left: 140%; }
+  100% { left: 140%; }
+}
+
+/* Base custom resets */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #fdfbf7;
+  color: #3d352f;
+  -webkit-font-smoothing: antialiased;
+}
